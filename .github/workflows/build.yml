@@ -22,5 +22,4 @@ jobs:
         with:
           name: my-geode-mod
           path: "**/*.geode"
-          #. 
 
