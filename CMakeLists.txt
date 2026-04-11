@@ -14,15 +14,10 @@ project(Template VERSION 1.0.0)
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cpp)
 
 # Set up the mod binary
-add_library(${PROJECT_NAME} SHARED ${SOURCES})
+add_library(${PROJECT_NAME} SHARED src/main.cpp)
 
-if (NOT DEFINED ENV{GEODE_SDK})
-    message(FATAL_ERROR "Unable to find Geode SDK! Please define GEODE_SDK environment variable to point to Geode")
-else()
-    message(STATUS "Found Geode: $ENV{GEODE_SDK}")
-endif()
-
-add_subdirectory($ENV{GEODE_SDK} ${CMAKE_CURRENT_BINARY_DIR}/geode)
-
-# Set up dependencies, resources, and link Geode.
-setup_geode_mod(${PROJECT_NAME})
+setup_geode_mod(
+    ${PROJECT_NAME}
+    RESOURCES
+        # Si tienes imágenes aquí van, si no, déjalo vacío
+)
