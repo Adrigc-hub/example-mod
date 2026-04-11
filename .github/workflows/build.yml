@@ -3,15 +3,17 @@ on:
     branches:
       - main
   workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Build Mod
-        uses: geode-sdk/build-geode-mod@main
+        uses: geode-sdk/build-geode@main
         with:
           bindings-version: 'v2.0.0-beta.1'
           platform: ANDROID
@@ -20,3 +22,4 @@ jobs:
         with:
           name: my-geode-mod
           path: "**/*.geode"
+
