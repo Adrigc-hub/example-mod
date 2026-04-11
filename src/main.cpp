@@ -8,7 +8,7 @@ class $modify(MyMenuLayer, MenuLayer) {
         if (!MenuLayer::init()) return false;
 
         auto sprite = CCSprite::createWithSpriteFrameName("GJ_playBtn_001.png");
-        sprite->setScale(0.5f); 
+        sprite->setScale(0.5f);
 
         auto btn = CCMenuItemSpriteExtra::create(
             sprite,
@@ -27,6 +27,10 @@ class $modify(MyMenuLayer, MenuLayer) {
     }
 
     void onMyCustomButton(CCObject* sender) {
-        FLAlertLayer::create("Layout Mod", "¡Botón funcionando!", "OK")->show();
+        FLAlertLayer::create(
+            "Layout Mod",
+            "¡Botón funcionando!",
+            "OK"
+        )->show();
     }
 };
