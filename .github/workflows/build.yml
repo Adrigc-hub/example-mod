@@ -12,15 +12,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Build Mod
         uses: geode-sdk/build-geode-mod@main
         with:
           bindings-version: 'v2.0.0-beta.1'
           platform: ANDROID
-
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: my-geode-mod
           path: "**/*.geode"
+
