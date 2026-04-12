@@ -12,5 +12,5 @@ jobs:
       - name: Output
         uses: actions/upload-artifact@v4
         with:
-          name: layout-mod
-          path: build/*.geode
+         name: layout-mod       
+         path: build/*.geode
