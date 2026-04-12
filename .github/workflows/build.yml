@@ -26,7 +26,6 @@ jobs:
           path: build/*.geode
 
       - name: Build Summary
-        run: |
-          echo "### Mod Build Successful! 🚀" >> $GITHUB_STEP_SUMMARY
-          echo "The Android .geode file has been generated and is ready for testing." >> $GITHUB_STEP_SUMMARY
+        run: | 
+        
  
