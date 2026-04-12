@@ -13,11 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build Mod
-        uses: geode-sdk/build-geode@v2.1.0 
+            - name: Build Mod
+        uses: geode-sdk/build-geode@v2.1.0
         with:
           bindings-version: 'v2.0.0-beta.1'
           platform: ANDROID
+
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
