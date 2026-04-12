@@ -1,20 +1,16 @@
 
 name: Build Geode Mod
-
-on: [push, workflow_dispatch]
-
+on: [push, workflow_dispatch] 
 jobs:
  build:
    runs-on: ubuntu-latest
    steps:
-     - uses: actions/checkout@v4
-
+     - uses: actions/checkout@v
      - name: Build
-       uses: geode-sdk/build-geode@v2
+       uses: geode-sdk/build-geode@v2.0.0
        with:
-         bindings-version: 'v2.0.0-beta.1'
-         platform: ANDROID
-    
+          bindings-version: 'v2.0.0-beta.1'
+          platform: ANDROID
      - name: Output 
        uses: actions/upload-artifact@v4 
        with:
