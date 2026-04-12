@@ -5,7 +5,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build
-        uses: geode-sdk/build-geode@main
+        uses: geode-sdk/build-geode@main 
         with:
           bindings-version: 'v2.0.0-beta.1'
           platform: ANDROID
@@ -13,5 +13,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: layout-mod
-          path: "**/*.geode"
-
+          path:
