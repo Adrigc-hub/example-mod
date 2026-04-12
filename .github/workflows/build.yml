@@ -25,7 +25,3 @@ jobs:
           name: geode-mod-android
           path: build/*.geode
 
-      - name: Build Summary
-        run: | 
-        
- 
