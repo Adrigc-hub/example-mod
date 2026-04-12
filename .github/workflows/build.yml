@@ -1,19 +1,32 @@
-
 name: Build Geode Mod
-on: [push, workflow_dispatch] 
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
 jobs:
- build:
-   runs-on: ubuntu-latest
-   steps:
-     - uses: actions/checkout@v
-     - name: Build
-       uses: geode-sdk/build-geode@v2.0.0
-       with:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Mod
+        uses: geode-sdk/build-geode@v2
+        with:
           bindings-version: 'v2.0.0-beta.1'
           platform: ANDROID
-     - name: Output 
-       uses: actions/upload-artifact@v4 
-       with:
-         name: layout-mod
-         path: build/*.geode
-         
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: geode-mod-android
+          path: build/*.geode
+
+      - name: Build Summary
+        run: |
+          echo "### Mod Build Successful! 🚀" >> $GITHUB_STEP_SUMMARY
+          echo "The Android .geode file has been generated and is ready for testing." >> $GITHUB_STEP_SUMMARY
+ 
