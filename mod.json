@@ -1,10 +1,14 @@
 {
-	"geode": "2.0.0-beta.1",
-	"gd": "2.206",
-	"id": "adrigc.layout_mod",
+	"geode": "3.0.0-beta.1",
+	"gd": {
+		"win": "2.204"
+	},
+	"id": "adradrigc1214gd.ia_editor",
 	"version": "1.0.0",
-	"name": "Layout Mod",
-	"developer": "Adrigc",
-	"description": "Mod para layouts en Android",
-	"settings": {}
+	"name": "IA Editor Movible",
+	"developer": "Tu Nombre",
+	"description": "Añade un botón de IA al editor que puedes mover a donde sea.",
+	"resources": {
+		"sprites": []
+	}
 }
